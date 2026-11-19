@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça um pouco sobre Lúcio Otavio Salema Simigni de Araujo.">
+    <title>Um Pouco Sobre Mim | Lúcio Otavio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* CONFIGURAÇÕES GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #1f2937;
+            background-color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        /* MENU DE NAVEGAÇÃO */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #006437;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #006437;
+        }
+
+        /* SEÇÃO INICIAL (HERO) */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #004d2a 0%, #007a43 100%);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero .subtitulo {
+            color: #a7f3d0;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #6ee7b7;
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #e5e7eb;
+            margin-bottom: 25px;
+        }
+
+        .hero .descricao {
+            font-size: 1.05rem;
+            color: #d1fae5;
+            max-width: 600px;
+            margin: 0 auto 35px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #006437;
+            padding: 15px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* SEÇÕES PADRÃO */
+        .secao {
+            padding: 85px 20px;
+        }
+
+        .secao-escura {
+            background-color: #111827;
+            color: #f3f4f6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .subtitulo {
+            color: #006437;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .secao-escura .subtitulo {
+            color: #34d399;
+        }
+
+        .secao h2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: #111827;
+        }
+
+        .secao-escura h2 {
+            color: #ffffff;
+        }
+
+        .secao p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid #006437;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .secao-escura .card {
+            background-color: #1f2937;
+            border-top-color: #34d399;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            color: #006437;
+            margin-bottom: 12px;
+        }
+
+        .secao-escura .card h3 {
+            color: #34d399;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* FRASE FINAL */
+        .frase-final {
+            margin-top: 45px;
+            padding: 25px;
+            background-color: #ecfdf5;
+            border-left: 5px solid #006437;
+            color: #065f46;
+            font-style: italic;
+            font-size: 1.2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background-color: #0b0f19;
+            color: #9ca3af;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        footer h3 {
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        footer .copyright {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 20px;
+        }
+
+        /* RESPONSIVIDADE PARA CELULAR */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav class="navbar">
+            <a href="#inicio" class="logo">UM POUCO SOBRE MIM</a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#origem">Minhas origens</a></li>
+                <li><a href="#valores">Meus valores</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="subtitulo">SEJA BEM-VINDO AO MEU ESPAÇO</p>
+
+                <h1>
+                    Olá, eu sou<br>
+                    <span>Lúcio Otavio</span>
+                </h1>
+
+                <h2>Salema Simigni de Araujo</h2>
+
+                <p class="descricao">
+                    Um pouco da minha história, minhas origens,
+                    meus valores, meus interesses e meus sonhos.
+                </p>
+
+                <a href="#sobre" class="botao">CONHEÇA MINHA HISTÓRIA</a>
+            </div>
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="secao">
+            <div class="container">
+                <p class="subtitulo">QUEM SOU EU?</p>
+                <h2>Um pouco sobre minha pessoa</h2>
+
+                <p>
+                    Meu nome é <strong>Lúcio Otavio Salema Simigni de Araujo</strong>,
+                    tenho 16 anos e atualmente estou cursando o Ensino Médio.
+                    Sou um jovem que busca crescer, aprender e construir um
+                    futuro baseado em bons princípios e valores.
+                </p>
+
+                <p>
+                    Tenho 1,80 metros de altura, olhos castanhos e pele branca.
+                    Gosto muito de praticar esportes, pois acredito que eles
+                    desenvolvem a disciplina, a dedicação e a determinação.
+                </p>
+
+                <p>
+                    Sou uma pessoa que valoriza muito sua família, sua fé
+                    e as pessoas que fazem parte da sua vida.
+                </p>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>16 anos</h3>
+                        <p>Minha idade</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>1,80 m</h3>
+                        <p>Minha altura</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Ensino Médio</h3>
+                        <p>Minha formação atual</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRENOME -->
+        <section id="origem" class="secao secao-escura">
+            <div class="container">
+                <p class="subtitulo">MINHAS RAÍZES</p>
+                <h2>O sobrenome Simigni</h2>
+
+                <p>
+                    Simigni é um sobrenome que faz parte da minha identidade
+                    e carrega um significado especial por estar ligado à
+                    história da minha família.
+                </p>
+
+                <p>
+                    Os sobrenomes representam nossas origens, nossas raízes
+                    e a trajetória das gerações que vieram antes de nós.
+                    Embora eu não tenha uma origem histórica específica
+                    confirmada para Simigni, tenho orgulho de carregar esse
+                    nome e de fazer parte da minha história familiar.
+                </p>
+            </div>
+        </section>
+
+        <!-- VALORES -->
+        <section id="valores" class="secao">
+            <div class="container">
+                <p class="subtitulo">AQUILO QUE ME DEFINE</p>
+                <h2>Meus valores e princípios</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>Minha família</h3>
+                        <p>
+                            Amo minha família e considero fundamental
+                            ter pessoas especiais ao meu lado.
+                            Minha família representa amor, apoio e inspiração.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Minha fé</h3>
+                        <p>
+                            Sou cristão e acredito em Deus.
+                            Minha fé faz parte de quem sou e influencia
+                            meus pensamentos, minhas escolhas e atitudes.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Meus princípios</h3>
+                        <p>
+                            Acredito na importância do respeito,
+                            da honestidade, da responsabilidade e
+                            de agir corretamente.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERESSES -->
+        <section class="secao secao-escura">
+            <div class="container">
+                <p class="subtitulo">O QUE EU GOSTO</p>
+                <h2>Meus interesses</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>Esportes</h3>
+                        <p>
+                            Gosto de praticar esportes e acredito que
+                            a atividade física é importante para o
+                            desenvolvimento pessoal.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Palmeiras</h3>
+                        <p>
+                            Sou palmeirense! Tenho orgulho de torcer
+                            pelo Palmeiras e acompanhar o futebol.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Conhecimento</h3>
+                        <p>
+                            Gosto da ideia de aprender coisas novas,
+                            desenvolver habilidades e descobrir
+                            novas possibilidades.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- OBJETIVOS -->
+        <section id="objetivos" class="secao">
+            <div class="container">
+                <p class="subtitulo">MEU FUTURO</p>
+                <h2>Meus sonhos e objetivos</h2>
+
+                <p>
+                    Atualmente estou no Ensino Médio e tenho o desejo
+                    de cursar Engenharia no futuro.
+                </p>
+
+                <p>
+                    Quero continuar estudando, adquirir conhecimento
+                    e desenvolver minhas capacidades para alcançar
+                    meus objetivos profissionais e pessoais.
+                </p>
+
+                <p>
+                    Sei que ainda tenho muito a aprender e muitas
+                    experiências pela frente, mas pretendo seguir
+                    meu caminho com fé, dedicação e responsabilidade.
+                </p>
+
+                <h3 class="frase-final">
+                    "Grandes conquistas começam com pequenos passos."
+                </h3>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <h3>Lúcio Otavio Salema Simigni de Araujo</h3>
+        <p>Um pouco sobre mim — Minha história, meus valores e meus sonhos.</p>
+        <p class="copyright">
+            © 2026 - Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
